@@ -22,6 +22,7 @@ export const Sidebar = ({
         <SidebarItem
           icon={LayoutTemplate}
           label="Design"
+          hidden
           isActive={activeTool === "templates"}
           onClick={() => onChangeActiveTool("templates")}
         />
@@ -52,6 +53,7 @@ export const Sidebar = ({
         <SidebarItem
           icon={Sparkles}
           label="AI"
+          hidden
           isActive={activeTool === "ai"}
           onClick={() => onChangeActiveTool("ai")}
         />

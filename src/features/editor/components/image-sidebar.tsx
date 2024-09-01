@@ -34,7 +34,7 @@ const ImageSidebar = ({ editor, activeTool, onChangeActiveTool }: ImageSidebarPr
 				title="Images"
 				description="Add images to the canvas"
 			/>
-			<div className="p-4 border-b">
+			<div className="p-4 border-b hidden">
 				<UploadButton
 					appearance={{
 						button: "w-full text-sm font-medium",

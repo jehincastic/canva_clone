@@ -7,6 +7,7 @@ interface SidebarItemProps {
 	icon: LucideIcon;
 	label: string;
 	isActive?: boolean;
+	hidden?: boolean;
 	onClick: () => void;
 }
 
@@ -14,8 +15,10 @@ const SidebarItem = ({
 	icon: Icon,
 	label,
 	onClick,
+	hidden,
 	isActive,
 }: SidebarItemProps) => {
+	if (hidden) return null;
 	return (
 		<Button
 			variant="ghost"

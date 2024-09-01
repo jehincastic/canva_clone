@@ -1,4 +1,3 @@
-import { verifyAuth } from "@hono/auth-js";
 import { Hono } from "hono";
 
 import { unsplash } from "@/lib/unsplash";
@@ -3479,7 +3478,7 @@ const data = {
 };
 
 const app = new Hono()
-	.get("/", verifyAuth(), async (c) => {
+	.get("/", async (c) => {
 		if (process.env.NEXT_PUBLIC_ENV === "development") {
 			return c.json(data);
 		}
